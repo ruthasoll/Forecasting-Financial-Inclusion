@@ -49,6 +49,23 @@ To forecast financial inclusion indicators for 2025-2028, incorporating both his
 
 ---
 
+## 📂 Unified Data Schema
+
+To maintain consistency across diverse data sources (World Bank, NBE, Ethio Telecom), we utilize a **Unified Schema**.
+
+### Record Types
+- **`observation`**: A specific data point measured at a point in time (e.g., Account Ownership %).
+- **`event`**: A significant milestone or policy launch (e.g., "M-Pesa License Awarded").
+- **`target`**: Official government or organizational goals (e.g., "NBE 2025 Goal of 70% Inclusion").
+- **`impact_link`**: (Defined in sheets) Connects an **Event** to an **Indicator** with an `impact_magnitude` and `lag_months`.
+
+### Data Pillars
+- **Banking**: Formal accounts and traditional financial services.
+- **Digital Payments**: Mobile money, wallet adoption, and digital transaction rates.
+- **Regulation**: Policy shifts, directives, and licensing events.
+
+---
+
 ## 💻 How to Run
 
 ### 1. Setup Environment
