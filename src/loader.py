@@ -42,6 +42,21 @@ def load_data(data_path: str = 'data/raw/ethiopia_fi_unified_data.xlsx') -> Dict
     # Ensure dates are datetime
     if 'observation_date' in df_data.columns:
         df_data['observation_date'] = pd.to_datetime(df_data['observation_date'])
+
+    # --- ENRICHMENT STEP ---
+    # Load supplementary data if exists
+    supp_path = os.path.join(os.path.dirname(data_path), 'supplementary_data.csv')
+    if os.path.exists(supp_path):
+        print(f"Loading supplementary data from {supp_path}...")
+        try:
+            df_supp = pd.read_csv(supp_path)
+            if 'observation_date' in df_supp.columns:
+                df_supp['observation_date'] = pd.to_datetime(df_supp['observation_date'])
+            # Align columns (fill missing with NaN)
+            df_data = pd.concat([df_data, df_supp], axis=0, ignore_index=True)
+        except Exception as e:
+            print(f"Warning: Failed to load supplementary data: {e}")
+    # -----------------------
     
     # Split by record_type
     observations = df_data[df_data['record_type'] == 'observation'].copy()
