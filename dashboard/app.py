@@ -174,7 +174,7 @@ if page == "🏠 Overview":
     
     if not events.empty:
         timeline_fig = create_event_timeline(events)
-        st.plotly_chart(timeline_fig, use_container_width=True)
+        st.plotly_chart(timeline_fig, width='stretch')
     
     st.markdown("---")
     
@@ -263,7 +263,7 @@ elif page == "📈 Trends Analysis":
         events_df=events if show_events else None
     )
     
-    st.plotly_chart(trend_fig, use_container_width=True)
+    st.plotly_chart(trend_fig, width='stretch')
     
     # Show data table
     with st.expander("📋 View Data Table"):
@@ -271,7 +271,7 @@ elif page == "📈 Trends Analysis":
             ['observation_date', 'value_numeric', 'source_name', 'confidence']
         ].sort_values('observation_date', ascending=False)
         
-        st.dataframe(indicator_data, use_container_width=True)
+        st.dataframe(indicator_data, width='stretch')
     
     st.markdown("---")
     
@@ -289,7 +289,7 @@ elif page == "📈 Trends Analysis":
     
     if comparison_indicators:
         comparison_fig = create_comparison_chart(observations, comparison_indicators)
-        st.plotly_chart(comparison_fig, use_container_width=True)
+        st.plotly_chart(comparison_fig, width='stretch')
     
     st.markdown("---")
     
@@ -343,7 +343,7 @@ elif page == "🔮 Forecasts":
             f"{indicator_name} - Forecast Scenarios"
         )
         
-        st.plotly_chart(forecast_fig, use_container_width=True)
+        st.plotly_chart(forecast_fig, width='stretch')
         
         # Scenario comparison table
         st.markdown("### 📊 Scenario Comparison (2027)")
