@@ -1,0 +1,9 @@
+Event,Event Type,Event Date,Affected Indicator,Direction,Magnitude,Estimate (pp),Lag (months),Evidence,Confidence
+Telebirr Launch,product_launch,2021-05-15,Mobile Money Account,positive,high,4.0,6,comparable,medium
+Telebirr Launch,product_launch,2021-05-15,Digital Payment Usage,positive,medium,5.0,12,comparable,medium
+Telecom Liberalization,policy,2022-08-10,Mobile Money Account,positive,low,1.0,12,market,low
+NBE Digital Strategy,policy,2023-03-01,Account Ownership Rate,positive,medium,2.0,18,policy,low
+M-Pesa Launch,product_launch,2023-08-10,Mobile Money Account,positive,medium,2.0,6,market,medium
+M-Pesa Launch,product_launch,2023-08-10,Digital Payment Usage,positive,medium,3.0,12,market,medium
+EthSwitch Interoperability,infrastructure,2024-01-15,Digital Payment Usage,positive,high,4.0,3,comparable,high
+EthSwitch Interoperability,infrastructure,2024-01-15,Account Ownership Rate,positive,low,1.5,6,comparable,low
